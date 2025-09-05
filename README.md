@@ -5,13 +5,13 @@
 Faça o clone do repositório:
 
 ```shell
-	git clone git@github.com:g1ll/cstsi_bda_20232_firebase_mongodb.git
+	git clone git@github.com:andrepgeraldoif/tbd
 ```
 
-Entre na pasta criada ***tbd_firebase_mongodb***:
+Entre na pasta criada ***tbd***:
 
 ```shell
-	cd bd_firebase_mongodb
+	cd tbd
 ```
 
 Execute o ***npm i***.
