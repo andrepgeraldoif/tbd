@@ -1,18 +1,14 @@
-import { initializeApp } from "firebase/app";
+import db from "../libs/firebase/rtdb_connection.js"
 import {
-  getDatabase,
+  endAt,
+  onChildAdded,
+  onChildChanged,
+  onChildRemoved,
+  orderByChild,
   query,
-  update,
-  get,
-  off,
   ref,
-     child, onValue, onChildAdded, onChildChanged,orderByChild, orderByKey, orderByValue} from "firebase/database"
-// import * as fb from "firebase/database"
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-
+  startAt
+} from "firebase/database";
 
 const refDB = ref(db); // = /
 const refNode = child(refDB,"produtos");// = /users/

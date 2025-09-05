@@ -1,11 +1,12 @@
 import db from "../libs/firebase/rtdb_connection.js"
 import * as fb from "firebase/database";
+import {onChildAdded} from "firebase/database";
 
-const node = "users"
+const node = "produtos" //No ou ramo a ser monitorado
 const refNode = fb.ref(db,node);
 let count =0;
 
-fb.onChildAdded(refNode,(snapshot)=>{
+onChildAdded(refNode,(snapshot)=>{
   console.log(++count)
   console.table(snapshot.val())
 });

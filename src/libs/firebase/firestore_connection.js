@@ -12,7 +12,7 @@ const firebaseConfig = {
     appId: process.env.REACT_APP_APP_ID
 };
 
-console.log(firebaseConfig);
+// console.log(firebaseConfig);
 const firebaseApp = initializeApp(firebaseConfig)
 const db = getFirestore(firebaseApp);
 export default db

@@ -1,9 +1,10 @@
 import { off, onChildChanged, ref } from "firebase/database";
 import db from "../libs/firebase/rtdb_connection.js"
 
-const node = "user"
+const node = "produtos"
 //CHILD ADDED
 let refDB = ref(db, node);
+let count= 0;
 
 onChildChanged(refDB, (snapshot) => { //()=>{}
   if (!snapshot.exists()) {
@@ -11,10 +12,10 @@ onChildChanged(refDB, (snapshot) => { //()=>{}
     process.exit(0)
   }
   console.table(snapshot.val())
-
-  if (snapshot.key == 4) {
+  count++;
+  if (count === 2) { // apenas exiba 2 mudancas
     console.log(snapshot.key)
-    console.log("Remove callback")
+    console.log("2 mudancas executadas. Callback removido")
     off(refDB, 'child_changed')
   }
 });

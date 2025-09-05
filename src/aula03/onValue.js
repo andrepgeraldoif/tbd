@@ -1,10 +1,11 @@
 import db from "../libs/firebase/rtdb_connection.js"
 import { onValue, ref } from "firebase/database";
 
-const node = "user"
+const node = "produtos/-MwSzyJRCG0FFdR2Ny_m"
 const userRef = ref(db,node)
 
 onValue(userRef,(snapshot)=>{
     console.table(snapshot.val())
-    // process.exit(0);
+    console.log("Descricao: "+ snapshot.val().descricao) // para um campo específico
+    process.exit(0);
 });

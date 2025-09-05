@@ -3,13 +3,11 @@ import db from "../libs/firebase/rtdb_connection.js"
 
 const node = "produtos"
 let refNode = ref(db, node);
-
 const consulta = query(refNode, orderBykey())
 
 onValue(consulta, (dados) => {
-  let arrayDados = Object.entries(dados.val())
-  arrayDados.reverse();
-  console.log('DESC')
+  let arrayDados = Object.entries(dados.val()); // mapeia em um array
+  arrayDados.reverse(); // reverte o array
   console.log(arrayDados)
   arrayDados.forEach((item,index)=>console.log(`${index}: ${item[0]}`))
 })

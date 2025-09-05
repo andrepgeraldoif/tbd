@@ -6,7 +6,7 @@ import {ref, get, child} from "firebase/database"
 // const refNode = child(refDB,node)
 
 //GET
-get(ref(db,'user/-NcX8qCosUwHH-mwMyCf')).then((snapshot)=>{
+get(ref(db,'produtos/-MwSzyJMlNDToTGtPuhc')).then((snapshot)=>{
     if(!snapshot.exists())
       throw new Error("Nó não encontrado")
     console.table(snapshot.val())
