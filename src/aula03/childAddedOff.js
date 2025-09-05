@@ -9,7 +9,7 @@ onChildAdded(refNode, (snapshot) => {
     console.table(snapshot.val())
     if (snapshot.key == 4) {
         console.log(snapshot.key)
-        console.log("Remove callback")
+        console.log("Callback removido")
         off(refNode, 'child_added')
     }
 });

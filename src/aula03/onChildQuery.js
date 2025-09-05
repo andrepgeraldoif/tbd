@@ -15,7 +15,7 @@ const userRef = ref(db, node)
 let listUsers = []
 
 //consulta para um path /users/ com nós que possuam 
-//objetos com  os seguintes campos {idade:number, nome:string}
+//objetos com os seguintes campos {idade:number, nome:string}
 let start = 0
 let end = 60
 let consulta = query(
